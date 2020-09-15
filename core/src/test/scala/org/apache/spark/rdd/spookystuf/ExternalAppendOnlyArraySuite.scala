@@ -16,7 +16,7 @@ class ExternalAppendOnlyArraySuite extends FunSpec with SparkUISupport {
 
   import com.tribbloids.spookystuff.testutils.TestHelper._
 
-  describe("cachedOrComputeIterator") {
+  describe("CachedOrComputeIterator") {
 
     val taskSize = 1000
 
@@ -56,7 +56,7 @@ class ExternalAppendOnlyArraySuite extends FunSpec with SparkUISupport {
       rdd
     }
 
-    describe(parallelism.toString) {
+    describe(s"parallelism=$parallelism") {
 
       it("can be shared by multiple tasks") {
 
